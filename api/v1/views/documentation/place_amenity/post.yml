@@ -1,0 +1,22 @@
+For Posting new review to a place
+---
+tags:
+  - Place_Amenities
+parameters:
+  - name: place_id
+    in: path
+    type: string
+    required: true
+    description: Amenity id
+  - name: amenity_id
+    in: path
+    type: string
+    required: true
+    description: place id
+responses:
+  404:
+    description: Oops Place_Amenities not found
+  201:
+    description: Request Success
+  201:
+    description: already linked

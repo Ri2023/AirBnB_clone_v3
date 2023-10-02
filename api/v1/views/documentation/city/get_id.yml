@@ -1,0 +1,37 @@
+The GET method is used to fetch an amenity based on its city_id
+---
+tags:
+  - Cities
+parameters:
+  - name: city_id
+    in: path
+    type: string
+    required: true
+    description: city id
+responses:
+  200:
+    description: Request Success
+    schema:
+      type: array
+      items:
+        properties:
+          __class__:
+            type: "string"
+          created_at:
+            type: string
+            description: instance creation datetime
+          updated_at:
+            type: string
+            description: instance update of last time
+          id:
+            type: string
+            description: State instance unique id
+          name:
+            type: string
+            description: Name of Place
+          state_id:
+             type: string
+             description: city id
+
+  404:
+    description: Oops City not found

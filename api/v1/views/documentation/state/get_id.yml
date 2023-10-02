@@ -1,0 +1,31 @@
+The GET method is used to fetch an amenity based on its States
+---
+tags:
+  - States
+parameters:
+  - name: state_id
+    in: path
+    type: string
+    required: false
+    description: state id
+responses:
+  404:
+    description: Oops State not found
+  200:
+    description: Request Success
+    schema:
+      properties:
+        __class__:
+          type: string
+        created_at:
+          type: string
+          description: instance creation datetime
+        updated_at:
+           type: string
+           description: instance update of last time
+        id:
+          type: string
+          description: State instance unique id
+        name:
+           type: string
+           description: Name of State

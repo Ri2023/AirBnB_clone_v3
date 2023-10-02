@@ -1,0 +1,21 @@
+TO update an place instance using identifier
+---
+tags:
+  - Places
+parameters:
+  - name: place_id
+    in: path
+    type: string
+    required: true
+    description: The specific identifier for the place to be updated
+  - name: request
+    in: body
+    required: true
+
+responses:
+  404:
+    description: Oops not found
+  400:
+    description: Oops JSON Inalid
+  200:
+    description: Request Success

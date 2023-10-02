@@ -1,0 +1,58 @@
+The GET method is used to fetch an amenity based on its Places
+---
+tags:
+  - Places
+parameters:
+  - name: place_id
+    in: path
+    type: string
+    required: true
+    description: place_id
+responses:
+  200:
+    description: Request Success
+    schema:
+      type: array
+      items:
+        properties:
+          __class__:
+            type: "string"
+          updated_at:
+            type: string
+            description: instance creation datetime
+          updated_at:
+            type: string
+            description: instance update of last time
+          id:
+            type: string
+            description: State instance unique id
+          description:
+            type: string
+            description: description of Place
+          latitude:
+             type: number
+             description: latitude of Place
+          longitude:
+             type: number
+             description: longitude of Place
+          max_guest:
+             type: integer
+             description: Maximum count of guests
+          name:
+            type: string
+            description: name of Place
+          number_bathrooms:
+             type: integer
+             description: bathrooms Number
+          number_rooms:
+             type: integer
+             description: rooms Number
+          price_by_night:
+             type: number
+             description: night Price
+          user_id:
+             type: string
+             description: id of Owner
+
+  404:
+    description: Oops City not found

@@ -1,0 +1,19 @@
+For Posting new state.
+---
+tags:
+  - States
+parameters:
+  - name: request
+    in: body
+    required: true
+    requires:
+      - name
+    properties:
+      name:
+        type: string
+
+responses:
+  400:
+    description: Oops JSON Inalid
+  201:
+    description: Request Success

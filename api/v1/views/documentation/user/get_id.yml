@@ -1,0 +1,42 @@
+The GET method is used to fetch an amenity based on its Users
+---
+tags:
+  - Users
+parameters:
+  - name: user_id
+    in: path
+    type: string
+    required: true
+    description: User id
+responses:
+  200:
+    description: Request Success
+    schema:
+      type: array
+      items:
+        properties:
+          __class__:
+            type: "string"
+          created_at:
+            type: string
+            description: instance creation datetime
+          updated_at:
+            type: string
+            description: instance update of last time
+          id:
+            type: string
+            description: State instance unique id
+          email:
+            type: string
+            description: email of User
+          password:
+            type: string
+            description: password of User
+          first_name:
+            type: string
+            description: first name of User
+          last_name:
+            type: string
+            description: last name of User
+  404:
+    description: Oops User not found

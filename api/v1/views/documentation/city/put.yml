@@ -1,0 +1,22 @@
+TO update an city instance using identifier
+---
+tags:
+  - Cities
+parameters:
+  - name: city_id
+    in: path
+    type: string
+    required: true
+    description: The specific identifier for the city to be updated
+  - name: update_request
+    in: body
+    required: true
+
+
+responses:
+  404:
+    description: Oops not found
+  400:
+    description: Oops JSON Inalid
+  200:
+    description: Request Success

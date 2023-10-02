@@ -1,0 +1,22 @@
+For Posting new amenity.
+---
+tags:
+  - Users
+parameters:
+  - name: user and pasword
+    in: body
+    required: true
+    requires:
+      - email:
+      - password:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+responses:
+  400:
+    description: Incorrect password or email || Oops JSON Inalid
+  201:
+    description: Request Success
+

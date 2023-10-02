@@ -1,0 +1,15 @@
+Deletes States by identifier
+---
+tags:
+  - States
+parameters:
+  - name: state_id
+    in: path
+    type: string
+    required: true
+    description: state id
+responses:
+  404:
+    description: Oops States not found
+  200:
+    description: Request Success

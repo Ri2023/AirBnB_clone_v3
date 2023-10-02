@@ -1,0 +1,15 @@
+Deletes Reviews by identifier
+---
+tags:
+  - Reviews
+parameters:
+  - name: review_id
+    in: path
+    type: string
+    required: true
+    description: review id
+responses:
+  404:
+    description: Oops Reviews not found
+  200:
+    description: Request Success
